@@ -6,17 +6,20 @@ The original puzzle can be found by following [this link](https://www.tomdalling
 
 ## Following Along
 In order to simplify using my code to decode the various layers of the onion, I have provided the simple script peel.sh:
----
+
+```
 ./peel.sh LEVEL FILE
----
+```
+
 This script will attempt to compile the haskell program necessary for completing the level LEVEL and will then isolate the
 encoded region of FILE for easy decoding. Then, the compiled haskell program will print the decoded output to standard output.
 
 For example, to _unpeel_ the code from level 0 located in level0.txt into level1.txt, use
----
+
+```
 chmod +x peel.sh
 ./peel.sh 0 level0.txt > level1.txt
----
+```
 
 ## Dependencies
 It is assumed that you are running on a Unix-based operating system, as peel.sh is a bash script and line endings in Windows
